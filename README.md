@@ -11,6 +11,14 @@ extracts the table fields.
 The CSV fieles with table fields are also output in the `data` directory that the script creates. In this directory,
 one will find a subdirectory for each environment and a subdirectory for each table pair.
 
+### Keywords
+
+- Python 3.12 or higher
+- Poetry
+- duckdb
+- ServiceNow REST API
+- Table comparison
+
 ### Config file
 
 The config file is a JSON file with following structure:
