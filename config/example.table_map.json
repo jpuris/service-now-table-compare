@@ -1,0 +1,6 @@
+{
+    "company": {
+        "prod": "core_company",
+        "preprod": "core_company"
+    }
+}

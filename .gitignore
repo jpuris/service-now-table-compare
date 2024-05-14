@@ -1,3 +1,13 @@
+# App specific
+
+data/
+config/table_map.json
+poetry.lock
+
+# macOS garbage
+.DS_Store
+
+# Python Specific
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

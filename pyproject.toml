@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "service-now-table-compare"
+version = "0.1.0"
+description = ""
+authors = ["Janis Puris <janis@puris.lv>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+duckdb = "^0.10.2"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
