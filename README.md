@@ -58,16 +58,18 @@ The config file is a JSON file with following structure:
 1. Update the configuration file
 
     ```sh
-        cp -r example.config.json config.json
-    ```
-
-1. Update the `.env` files with the ServiceNow instance credentials.
-
-    ```sh
         cp config/example.table_map.json table_map.json
     ```
 
     Then update the `config/table_map.json` with the table pairs you want to compare across the environments.
+
+1. Update the `.env` files with the ServiceNow instance credentials.
+
+    ```sh
+        cp -r example.env .env 
+    ```
+
+    Then update the secrets for each env in `.env` directory.
 
 ## Usage
 
