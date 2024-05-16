@@ -52,13 +52,13 @@ The config file is a JSON file with following structure:
     Install the dependencies:
 
     ```sh
-        poetry install --no-root
+    poetry install --no-root
     ```
 
 1. Update the configuration file
 
     ```sh
-        cp config/example.table_map.json table_map.json
+    cp config/example.table_map.json table_map.json
     ```
 
     Then update the `config/table_map.json` with the table pairs you want to compare across the environments.
@@ -66,7 +66,7 @@ The config file is a JSON file with following structure:
 1. Update the `.env` files with the ServiceNow instance credentials.
 
     ```sh
-        cp -r example.env .env 
+    cp -r example.env .env 
     ```
 
     Then update the secrets for each env in `.env` directory.
@@ -76,13 +76,13 @@ The config file is a JSON file with following structure:
 Activate the local virtual environment:
 
 ```sh
-    poetry shell
+poetry shell
 ```
 
 To run the script, execute the following command:
 
 ```sh
-    python main.py
+python main.py
 ```
 
 Check the `data` directory for the output CSV files and `data/out` for the comparison results.
@@ -90,14 +90,14 @@ Check the `data` directory for the output CSV files and `data/out` for the compa
 ### Example comparison output
 
 ```sh
-    $ cat data/out/comparison_name_1.csv
-    fn__prod,fn__preprod,exists_in
-    ,phone,only in preprod
-    ...
-    sys_id,sys_id,both
-    name,latitude,both
-    ...
-    u_some_custom_field,,only in prod
+$ cat data/out/comparison_name_1.csv
+fn__prod,fn__preprod,exists_in
+,phone,only in preprod
+...
+sys_id,sys_id,both
+name,latitude,both
+...
+u_some_custom_field,,only in prod
 ```
 
 ## License
