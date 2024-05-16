@@ -58,7 +58,7 @@ The config file is a JSON file with following structure:
 1. Update the configuration file
 
     ```sh
-    cp config/example.table_map.json table_map.json
+    cp config/example.table_map.json config/table_map.json
     ```
 
     Then update the `config/table_map.json` with the table pairs you want to compare across the environments.
@@ -82,7 +82,7 @@ poetry shell
 To run the script, execute the following command:
 
 ```sh
-python main.py
+python app/main.py
 ```
 
 Check the `data` directory for the output CSV files and `data/out` for the comparison results.
