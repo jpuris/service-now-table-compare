@@ -48,6 +48,11 @@ def download_attr_names(
     
     # write to a CSV file with attribute_names as header
     output_file_path = Path(data_dir) / f"{env}/{table_name}.csv"
+
+    # make sure the directory exists
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # write to the file
     with open(output_file_path, "w") as f:
         writer = csv.writer(f)
         writer.writerow(['attr_name'])
