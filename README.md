@@ -52,7 +52,7 @@ The config file is a JSON file with following structure:
     Install the dependencies:
 
     ```sh
-        poetry install
+        poetry install --no-root
     ```
 
 1. Update the configuration file
