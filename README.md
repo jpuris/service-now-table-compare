@@ -32,9 +32,16 @@ The config file is a JSON file with following structure:
     "comparison_name_2": {
         "first_env_name": "service_now_table_2",
         "second_env_name": "service_now_table_2"
+    },
+    "comparison_name_3": {
+        "first_env_name": "service_now_table_3",
+        "second_env_name": null
     }
 }
 ```
+
+In the above example, when a table has been named `null`, the downloading of fields as well as comparison against the other table will be skipped.
+
 
 ### Env file
 

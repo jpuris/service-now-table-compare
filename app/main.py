@@ -125,8 +125,11 @@ def refresh_data_files(table_map: str):
     """Refresh the data files for all the tables in the table_map."""
     for task_name, table_pair in table_map.items():
         for env, table_name in table_pair.items():
-            print(f"Downloading attribute names for '{table_name}', environment: '{env}'")
-            download_attr_names(env, table_name, data_dir)
+            if table_name:
+                print(f"Downloading attribute names for '{table_name}', environment: '{env}'")
+                download_attr_names(env, table_name, data_dir)
+            else:
+                print(f"Skipping '{env}' as table name is not provided")
         print(f"Data refreshed for {task_name}")
 
 
@@ -149,4 +152,8 @@ if __name__ == "__main__":
 
     dbcon = duckdb.connect(":memory:")
     for job_name, job_data in table_map.items():
+        # check if any values are None
+        if None in job_data.values():
+            print(f"Skipping comparison job '{job_name}' as at least one table name is not provided")
+            continue
         compare_datasets(dbcon, data_dir, job_name, job_data)
